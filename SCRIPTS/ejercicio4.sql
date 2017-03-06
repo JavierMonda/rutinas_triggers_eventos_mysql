@@ -1,0 +1,8 @@
+DELIMITER $$
+DROP TRIGGER IF EXISTS control_horas$$
+CREATE TRIGGER control_horas BEFORE INSERT ON tAsignatura FOR EACH ROW
+BEGIN
+	IF NEW.numHoras>126 THEN
+		SET NEW.numHoras=126;
+	END IF;
+END $$

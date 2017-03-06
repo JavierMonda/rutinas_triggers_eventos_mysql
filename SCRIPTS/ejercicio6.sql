@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS registroUT;
+CREATE TABLE registroUT(
+	nombreUTreg VARCHAR(90) PRIMARY KEY NOT NULL,
+    descripcionUTreg TEXT DEFAULT NULL,
+    apuntes VARCHAR(90) DEFAULT NULL,
+    nombreAsigReg CHAR(3) NOT NULL,
+    fecha DATE NOT NULL
+);
+
+DELIMITER $$
+DROP TRIGGER IF EXISTS reg_UT$$
+CREATE TRIGGER reg_UT AFTER INSERT ON tUnidadTrabajo FOR EACH ROW
+BEGIN
+	INSERT INTO registroUT VALUES(NEW.nombreUT,NEW.descripcionUT,NEW.apuntes,NEW.nombreAsignaturaUT,CURDATE());
+END $$
