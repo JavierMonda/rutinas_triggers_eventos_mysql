@@ -15,7 +15,7 @@ Sistemas Gestores de Bases de Datos
 Javier Jiménez García
 
 ### Blog 
-https://javierjimenez.mondaenlaweb.com
+https://javierjg.es
 
 Este proyecto está bajo una licencia GNU GENERAL PUBLIC LICENSE Version 3. 
 Para más detalles, ver archivo LICENSE
